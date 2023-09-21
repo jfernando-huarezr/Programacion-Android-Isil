@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Thor</string>
+    <string name="saludo">Hola!</string>
+    /*como una variable global? */
+    <string name="mensaje">Vine, ví y vencí</string>
+    <string name="autor">Julio César</string>
+    <string name="logo">Logo de la empresa</string>
+    <string name="imagen_empezar">Familia comprando</string>
+    <string name="derechos">2023 - Todos los derechos reservados</string>
+    <string name="inicio">Inicio</string>
+    <string name="title_activity_empezar">Empezar</string>
+    <string name="frase_empezar">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus molestie mollis euismod. Nulla condimentum molestie velit. Fusce egestas tortor augue, vel semper justo cursus quis. Curabitur eget lacus urna. Fusce condimentum eget justo non dapibus.
+    </string>
+    <string name="empiece">Empiece Ya!</string>
+    <string name="termino">Terminos</string>
+    <string name="title_activity_terminos">Terminos y Condiciones</string>
+    <string name="title_activity_escritorio">Escritorio</string>
+    <string name="contenido_terminos">
+        \n\n
+        Proin porta, nisi vitae vestibulum porttitor, neque magna faucibus tellus, ut posuere quam odio quis dui. Mauris hendrerit malesuada turpis at facilisis. Pellentesque lobortis maximus purus. Proin imperdiet ligula eu elementum porttitor. Nulla nec nisi est. Aenean blandit, quam vitae porttitor dignissim, nulla purus laoreet dui, sit amet aliquam ligula dui vitae felis. Fusce quis finibus magna, fermentum scelerisque magna. In justo neque, commodo hendrerit risus nec, vestibulum placerat justo. Suspendisse semper fringilla ipsum, sed gravida eros imperdiet tempor.
+\n\n
+Suspendisse eu ultrices nisl. Fusce venenatis quam sed turpis porttitor, vel tincidunt diam luctus. Nunc et magna sed tellus venenatis rutrum. Integer purus lacus, blandit a nunc ut, molestie gravida urna. Integer sit amet purus egestas nisl ullamcorper ultricies vel eu lorem. Proin pulvinar ultricies quam vel finibus. Suspendisse ut nulla nec tortor porta dictum. Nulla sit amet enim at arcu gravida ultrices. Praesent egestas vulputate lacus, et facilisis ligula. Maecenas sodales vulputate consectetur.
+\n\n
+Curabitur eu condimentum sapien, nec consectetur ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Etiam nec urna eleifend, feugiat velit quis, congue mi. Donec maximus ac nunc ut ultrices. Sed risus felis, euismod nec malesuada et, volutpat nec libero. Donec sodales varius est ut tincidunt. Duis in dictum ligula. Integer vulputate mauris felis. Etiam condimentum posuere justo. Nullam ante diam, varius at rutrum condimentum, auctor quis tortor. Donec lectus lorem, hendrerit non dictum gravida, accumsan in lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+\n\n
+Nullam ac lacinia magna. Praesent euismod mi non laoreet varius. Aliquam interdum purus ut ipsum vestibulum, vitae commodo mauris maximus. Suspendisse malesuada odio id libero luctus faucibus. Phasellus a feugiat velit. Phasellus vitae tortor quis metus condimentum imperdiet. Sed eget risus erat. Vestibulum dictum rhoncus nulla, id cursus ex consectetur ut. Maecenas at convallis sem. Praesent tincidunt nec eros at tempor. Nullam sit amet tortor sit amet sem interdum consectetur in sed justo. Ut mattis tellus at augue dignissim, vitae porta enim malesuada. Praesent ornare pharetra tincidunt. Fusce ultrices tincidunt gravida. Integer dictum, arcu vel consectetur condimentum, magna justo consequat nibh, non tristique ante lorem eu odio. Sed eget libero ac leo ultricies convallis.
+\n\n
+Suspendisse potenti. Sed condimentum maximus massa at eleifend. Praesent finibus non tellus in luctus. Donec accumsan urna non leo rhoncus luctus non quis ipsum. Fusce tempor mauris non nisl varius, sed gravida ipsum rutrum. Aenean sed ligula quam. Nam aliquam sed nunc eget dignissim. Quisque et nulla at eros fermentum mollis. Fusce dapibus consectetur orci, posuere iaculis turpis scelerisque sit amet.
+\n\n
+Nam luctus diam non tellus faucibus, a venenatis nunc rutrum. Duis pretium pharetra turpis eu tincidunt. Maecenas venenatis ante at ultricies dictum. Nunc quis rhoncus nulla. Nullam feugiat mattis ante non malesuada. Vivamus id condimentum justo, id venenatis dolor. Nulla venenatis mauris eu blandit efficitur. Cras eget velit porta nisl condimentum placerat. Maecenas pulvinar tellus quam, sed gravida felis varius non. Curabitur consequat, mi mollis vehicula varius, orci libero consectetur lacus, id molestie dolor sem non orci. Nam ac justo nibh.
+    </string>
+    <string name="cerrar">Cerrar</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_proveedores">Proveedores</string>
+    <string name="title_activity_empleados">Empleados</string>
+    <string name="title_activity_tienda">Tienda</string>
+    <string name="title_activity_area_clientes">AreaClientes</string>
+    <string name="title_activity_caja">Caja</string>
+</resources>
