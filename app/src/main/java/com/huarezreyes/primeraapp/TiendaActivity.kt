@@ -140,6 +140,8 @@ class TiendaActivity : ComponentActivity() {
             putString("descripcion", descripcion)
         }
 
-        startActivity(Intent(this@TiendaActivity, ProductosActivity::class.java))
+        val intent = Intent(this@TiendaActivity, ProductosActivity::class.java)
+        intent.putExtras(bundle)
+        startActivity(intent)
     }
 }

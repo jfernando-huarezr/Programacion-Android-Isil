@@ -1,46 +1,55 @@
 package com.huarezreyes.primeraapp
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.huarezreyes.primeraapp.ui.theme.PrimeraAppTheme
+import com.android.volley.Request
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 
 class ProductosActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val bundle = intent.extras //para recuperar los datos que reicbe este activity con la clase Bundle
+        val idcategoria = bundle!!.getString("idcategoria")
+        val nombre = bundle!!.getString("nombre")
+        val descripcion = bundle!!.getString("descripcion")
+
+        Log.d("idcategoria", idcategoria.toString())
+
+        leerServicio(idcategoria)
+
         setContent {
-            PrimeraAppTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting3("Android")
-                }
+            Column {
+                Text(text = nombre!!,
+                    style = MaterialTheme.typography.headlineLarge
+                    )
+                Text(text = descripcion!!)
             }
         }
     }
-}
 
-@Composable
-fun Greeting3(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+    private fun leerServicio(idcategoria : String?) {
+        val queue = Volley.newRequestQueue(this)
+        val url = "https://servicios.campus.pe/productos.php?idcategoria="+idcategoria
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview3() {
-    PrimeraAppTheme {
-        Greeting3("Android")
+        // Request a string response from the provided URL.
+        val stringRequest = StringRequest(
+            Request.Method.GET, url,
+            { response ->
+                Log.d("DATOS", response)
+                //llenarLista(response)
+            },
+            {
+                Log.d("DATOSERROR", it.message.toString())
+            })
+
+        queue.add(stringRequest)
     }
 }
+
