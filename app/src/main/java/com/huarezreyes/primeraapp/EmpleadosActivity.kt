@@ -83,17 +83,17 @@ class EmpleadosActivity : ComponentActivity() {
                     content ={
                         items(
                             items = arrayList,
-                            itemContent = {
+                            itemContent = {empleado ->
                                 Box (
                                     modifier = Modifier.fillParentMaxSize()
 
                                 ) {
-                                    Text(text = it["apellidos"].toString() + " " + it["nombres"].toString() ,
+                                    Text(text = empleado["apellidos"].toString() + " " + empleado["nombres"].toString() ,
                                         style = MaterialTheme.typography.titleLarge,
                                         color = Color.Red
                                     )
                                     Text(
-                                        text = it["cargo"].toString(),
+                                        text = empleado["cargo"].toString(),
                                         style = MaterialTheme.typography.titleMedium
                                     )
                                 }
