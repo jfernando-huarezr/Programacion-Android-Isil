@@ -4,20 +4,14 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.RectangleShape
-import androidx.compose.ui.res.dimensionResource
-import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.unit.dp
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
@@ -79,22 +73,19 @@ class EmpleadosActivity : ComponentActivity() {
     private fun dibujar(arrayList: ArrayList<HashMap<String, String>>) {
         setContent {
             Column {
-                Text(
-                    text = stringResource(id = R.string.title_activity_empleados),
-                    style = MaterialTheme.typography.headlineLarge
-                )
+//                Text(
+//                    text = stringResource(id = R.string.title_activity_empleados),
+//                    style = MaterialTheme.typography.headlineLarge
+//                )
 
-                //es como lazy grid
-                LazyColumn(
+                //es como lazy grid. lazygrid, lazycolumn y lazyrow
+                LazyRow(
                     content ={
                         items(
                             items = arrayList,
                             itemContent = {
-                                Column (
-                                    modifier = Modifier.padding(all = dimensionResource(id = R.dimen.espacio2))
-                                        .border(width = 1.dp, color = Color.Gray, shape = RectangleShape)
-                                        .padding(all = dimensionResource(id = R.dimen.espacio))
-                                        .fillMaxWidth()
+                                Box (
+                                    modifier = Modifier.fillParentMaxSize()
 
                                 ) {
                                     Text(text = it["apellidos"].toString() + " " + it["nombres"].toString() ,
