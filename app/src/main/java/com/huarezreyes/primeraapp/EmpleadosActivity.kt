@@ -4,14 +4,22 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.unit.dp
+import coil.compose.AsyncImage
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
@@ -88,14 +96,37 @@ class EmpleadosActivity : ComponentActivity() {
                                     modifier = Modifier.fillParentMaxSize()
 
                                 ) {
-                                    Text(text = empleado["apellidos"].toString() + " " + empleado["nombres"].toString() ,
-                                        style = MaterialTheme.typography.titleLarge,
-                                        color = Color.Red
+
+                                    AsyncImage(
+                                        model = "https://servicios.campus.pe/fotos/" + empleado["foto"],
+                                        contentDescription = null,
+                                        modifier = Modifier
+                                            .fillMaxSize(),
+                                        contentScale = ContentScale.Crop
                                     )
-                                    Text(
-                                        text = empleado["cargo"].toString(),
-                                        style = MaterialTheme.typography.titleMedium
-                                    )
+
+                                    Column (
+                                        modifier = Modifier.fillMaxSize().
+                                                    padding(end = 15.dp, bottom =15.dp),
+                                                    verticalArrangement = Arrangement.Bottom,
+                                                    horizontalAlignment = Alignment.End
+                                    ) {
+                                        Text(text = empleado["apellidos"].toString() + " " + empleado["nombres"].toString() ,
+                                            style = MaterialTheme.typography.titleLarge,
+                                            modifier = Modifier.background(Color.White).
+                                                        padding(horizontal = 10.dp, vertical=5.dp)
+                                        )
+                                        Text(
+                                            text = empleado["cargo"].toString(),
+                                            style = MaterialTheme.typography.titleMedium,
+                                            modifier = Modifier.background(Color.Black).
+                                                        padding(horizontal = 10.dp, vertical=5.dp),
+                                                        color = Color.White
+
+                                        )
+
+                                    }
+
                                 }
 
                             }
