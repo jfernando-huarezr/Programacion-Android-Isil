@@ -22,7 +22,7 @@ class CajaActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting5("Android")
+                    Greeting2("Android")
                 }
             }
         }
@@ -30,7 +30,7 @@ class CajaActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting5(name: String, modifier: Modifier = Modifier) {
+fun Greeting2(name: String, modifier: Modifier = Modifier) {
     Text(
         text = "Hello $name!",
         modifier = modifier
@@ -39,8 +39,8 @@ fun Greeting5(name: String, modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview5() {
+fun GreetingPreview2() {
     PrimeraAppTheme {
-        Greeting5("Android")
+        Greeting2("Android")
     }
 }

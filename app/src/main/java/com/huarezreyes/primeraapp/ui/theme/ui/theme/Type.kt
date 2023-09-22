@@ -1,4 +1,4 @@
-package com.huarezreyes.primeraapp.ui.theme
+package com.huarezreyes.primeraapp.ui.theme.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
