@@ -27,7 +27,7 @@ class ProveedoresActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        leerServicio();
+        leerServicio()
 
     }
 
@@ -86,7 +86,7 @@ class ProveedoresActivity : ComponentActivity() {
                     content ={
                        items(
                            items = arrayList,
-                           itemContent = {
+                           itemContent = {proveedor ->
                                Column (
                                    modifier = Modifier.padding(all = dimensionResource(id = R.dimen.espacio2))
                                        .border(width = 1.dp, color = Color.Gray, shape = RectangleShape)
@@ -94,14 +94,14 @@ class ProveedoresActivity : ComponentActivity() {
                                        .fillMaxWidth()
                                    
                                ) {
-                                   Text(text = it["nombreempresa"].toString(),
+                                   Text(text = proveedor["nombreempresa"].toString(),
                                        style = MaterialTheme.typography.titleLarge,
                                        color = Color.Red
                                    )
-                                   Text(text = it["nombrecontacto"].toString(),
+                                   Text(text = proveedor["nombrecontacto"].toString(),
                                        style = MaterialTheme.typography.titleMedium
                                    )
-                                   Text(text = it["cargocontacto"].toString())
+                                   Text(text = proveedor["cargocontacto"].toString())
                                }
                                
                            }
