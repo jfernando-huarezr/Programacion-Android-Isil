@@ -1,4 +1,4 @@
-package com.huarezreyes.primeraapp
+package com.huarezreyes.primeraapp.paginas
 
 import android.os.Bundle
 import android.util.Log
@@ -23,6 +23,7 @@ import coil.compose.AsyncImage
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.huarezreyes.primeraapp.utils.Total
 import org.json.JSONArray
 
 class EmpleadosActivity : ComponentActivity() {
@@ -34,7 +35,7 @@ class EmpleadosActivity : ComponentActivity() {
 
     private fun leerServicio() {
         val queue = Volley.newRequestQueue(this)
-        val url = "https://servicios.campus.pe/empleados.php"
+        val url = Total.rutaServicio + "empleados.php"
 
         // Request a string response from the provided URL.
         val stringRequest = StringRequest(
@@ -98,7 +99,7 @@ class EmpleadosActivity : ComponentActivity() {
                                 ) {
 
                                     AsyncImage(
-                                        model = "https://servicios.campus.pe/fotos/" + empleado["foto"],
+                                        model = Total.rutaServicio+ "fotos/" + empleado["foto"],
                                         contentDescription = null,
                                         modifier = Modifier
                                             .fillMaxSize(),

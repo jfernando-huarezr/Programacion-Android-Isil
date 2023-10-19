@@ -1,4 +1,4 @@
-package com.huarezreyes.primeraapp
+package com.huarezreyes.primeraapp.paginas
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

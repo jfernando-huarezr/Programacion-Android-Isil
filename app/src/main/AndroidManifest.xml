@@ -15,50 +15,65 @@
         android:theme="@style/Theme.PrimeraApp"
         tools:targetApi="31">
         <activity
-            android:name=".ProductosActivity"
+            android:name=".paginas.DirectoresInsertActivity"
+            android:exported="false"
+            android:label="@string/title_activity_directores_insert"
+            android:theme="@style/Theme.PrimeraApp" />
+        <activity
+            android:name=".paginas.ProductoDetalleActivity"
+            android:exported="false"
+            android:label="@string/title_activity_producto_detalle"
+            android:theme="@style/Theme.PrimeraApp" />
+        <activity
+            android:name=".paginas.DirectoresActivity"
+            android:exported="true"
+            android:label="@string/title_activity_directores"
+            android:theme="@style/Theme.PrimeraApp" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity
+            android:name=".paginas.ProductosActivity"
             android:exported="false"
             android:label="@string/title_activity_productos"
             android:theme="@style/Theme.PrimeraApp" />
         <activity
-            android:name=".CajaActivity"
+            android:name=".paginas.CajaActivity"
             android:exported="false"
             android:label="@string/title_activity_caja"
             android:theme="@style/Theme.PrimeraApp" />
         <activity
-            android:name=".AreaClientesActivity"
+            android:name=".paginas.AreaClientesActivity"
             android:exported="false"
             android:label="@string/title_activity_area_clientes"
             android:theme="@style/Theme.PrimeraApp" />
         <activity
-            android:name=".TiendaActivity"
+            android:name=".paginas.TiendaActivity"
             android:exported="false"
             android:label="@string/title_activity_tienda"
             android:theme="@style/Theme.PrimeraApp" />
         <activity
-            android:name=".EmpleadosActivity"
+            android:name=".paginas.EmpleadosActivity"
             android:exported="false"
             android:label="@string/title_activity_empleados"
             android:theme="@style/Theme.PrimeraApp" />
         <activity
-            android:name=".ProveedoresActivity"
+            android:name=".paginas.ProveedoresActivity"
             android:exported="false"
             android:label="@string/title_activity_proveedores"
             android:theme="@style/Theme.PrimeraApp" />
         <activity
             android:name=".SplashActivity"
-            android:exported="true"
-            android:theme="@style/Theme.PrimeraApp">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"
+            android:theme="@style/Theme.PrimeraApp" />
         <activity
             android:name=".EscritorioActivity"
             android:exported="false"
             android:label="@string/title_activity_escritorio"
-            android:theme="@style/Theme.PrimeraApp" />
+            android:theme="@style/Theme.PrimeraApp"/>
         <activity
             android:name=".TerminosActivity"
             android:exported="false"

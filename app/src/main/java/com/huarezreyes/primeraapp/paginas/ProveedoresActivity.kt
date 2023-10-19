@@ -1,4 +1,4 @@
-package com.huarezreyes.primeraapp
+package com.huarezreyes.primeraapp.paginas
 
 import android.os.Bundle
 import android.util.Log
@@ -21,6 +21,8 @@ import androidx.compose.ui.unit.dp
 import com.android.volley.Request
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.huarezreyes.primeraapp.R
+import com.huarezreyes.primeraapp.utils.Total
 import org.json.JSONArray
 
 class ProveedoresActivity : ComponentActivity() {
@@ -33,7 +35,7 @@ class ProveedoresActivity : ComponentActivity() {
 
     private fun leerServicio() {
         val queue = Volley.newRequestQueue(this)
-        val url = "https://servicios.campus.pe/proveedores.php"
+        val url = Total.rutaServicio+ "proveedores.php"
 
         // Request a string response from the provided URL.
         val stringRequest = StringRequest(

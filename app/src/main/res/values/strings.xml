@@ -38,5 +38,8 @@ Nam luctus diam non tellus faucibus, a venenatis nunc rutrum. Duis pretium phare
     <string name="title_activity_area_clientes">AreaClientes</string>
     <string name="title_activity_caja">Caja</string>
     <string name="cantidad_productos">Total: </string>
-    <string name="title_activity_productos">ProductosActivity</string>
+    <string name="title_activity_productos">Productos</string>
+    <string name="title_activity_directores">Directores</string>
+    <string name="title_activity_producto_detalle">ProductoDetalleActivity</string>
+    <string name="title_activity_directores_insert">DirectoresInsertActivity</string>
 </resources>

@@ -28,6 +28,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
+import com.huarezreyes.primeraapp.paginas.AreaClientesActivity
+import com.huarezreyes.primeraapp.paginas.CajaActivity
+import com.huarezreyes.primeraapp.paginas.DirectoresActivity
+import com.huarezreyes.primeraapp.paginas.EmpleadosActivity
+import com.huarezreyes.primeraapp.paginas.ProveedoresActivity
+import com.huarezreyes.primeraapp.paginas.TiendaActivity
 
 class EscritorioActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,6 +44,7 @@ class EscritorioActivity : ComponentActivity() {
             arrayOf(
                 "Proveedores",
                 "Empleados",
+                "Directores",
                 "Tienda",
                 "Area clientes",
                 "Caja",
@@ -46,6 +53,7 @@ class EscritorioActivity : ComponentActivity() {
         val iconos = intArrayOf(
             R.drawable.baseline_support_24,
             R.drawable.baseline_person_24,
+            R.drawable.baseline_emoji_objects_24,
             R.drawable.baseline_storefront_24,
             R.drawable.baseline_people_24,
             R.drawable.baseline_attach_money_24,
@@ -62,7 +70,7 @@ class EscritorioActivity : ComponentActivity() {
                         contentDescription = "person shopping",
                         modifier = Modifier
                             .fillMaxWidth()
-                            .height(400.dp),
+                            .height(300.dp),
                         contentScale = ContentScale.Crop
                     )
 
@@ -114,7 +122,7 @@ class EscritorioActivity : ComponentActivity() {
                             )
                         }
                     }
-                })
+                }) //LazyVerticalGrid
 
             }
 
@@ -127,10 +135,11 @@ class EscritorioActivity : ComponentActivity() {
         when(posicion) {
             0 -> startActivity(Intent(this@EscritorioActivity, ProveedoresActivity::class.java))
             1 -> startActivity(Intent(this@EscritorioActivity, EmpleadosActivity::class.java))
-            2 -> startActivity(Intent(this@EscritorioActivity, TiendaActivity::class.java))
-            3 -> startActivity(Intent(this@EscritorioActivity, AreaClientesActivity::class.java))
-            4 -> startActivity(Intent(this@EscritorioActivity, CajaActivity::class.java))
-            5 -> finish()
+            2 -> startActivity(Intent(this@EscritorioActivity, DirectoresActivity::class.java))
+            3 -> startActivity(Intent(this@EscritorioActivity, TiendaActivity::class.java))
+            4 -> startActivity(Intent(this@EscritorioActivity, AreaClientesActivity::class.java))
+            5 -> startActivity(Intent(this@EscritorioActivity, CajaActivity::class.java))
+            6 -> finish()
         }
     }
 }
